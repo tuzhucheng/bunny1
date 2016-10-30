@@ -319,12 +319,12 @@ small {
 
         # this code makes it so that if you put a command in angle brackets
         # (so it looks like an HTML tag), then the command will get executed.
-        # doing something like this is useful when there is a server on your 
-        # LAN with the same name as a command that you want to use without 
+        # doing something like this is useful when there is a server on your
+        # LAN with the same name as a command that you want to use without
         # any arguments.  ex. at facebook, there is an 'svn' command and
-        # the svn(.facebook.com) server, so if you type 'svn' into the 
+        # the svn(.facebook.com) server, so if you type 'svn' into the
         # location bar of a browser, it goes to the server first even though
-        # that's not usually what you want.  this provides a workaround for 
+        # that's not usually what you want.  this provides a workaround for
         # that problem.
         if raw.startswith("<") and raw.endswith(">"):
             return self._b1.do_command(raw[1:-1])
@@ -386,8 +386,8 @@ class ExampleBunny(bunny1.Bunny1):
     def __init__(self):
         bunny1.Bunny1.__init__(self, ExampleCommands(), ExampleDecorators())
 
-    # an example showing how you can handle URLs that happen before 
-    # the querystring by adding methods to the Bunny class instead of 
+    # an example showing how you can handle URLs that happen before
+    # the querystring by adding methods to the Bunny class instead of
     # the commands class
     @cherrypy.expose
     def header_gif(self):
